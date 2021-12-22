@@ -1,0 +1,30 @@
+version: '2.2'
+services:
+  exporter-1:
+    build: ./exporter-1
+    restart: always
+    expose:
+      - 9038
+    network_mode: host
+
+  exporter-2:
+    build: ./exporter-2
+    user: root
+    restart: always
+    expose:
+      - 9000
+    network_mode: host
+
+  redis:
+    build: ./redis
+    user: root
+    restart: always
+    expose:
+      - 6379
+    network_mode: host
+
+  slack-bot:
+    build: ./slack-bot
+    user: root
+    restart: always
+    network_mode: host
