@@ -1,3 +1,3 @@
 FROM danielqsj/kafka-exporter:latest
 USER root
-CMD ["--kafka.server=172.16.1.73:9092"]
+CMD ["--kafka.server=172.16.0.184:9092"]
